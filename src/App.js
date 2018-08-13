@@ -1,19 +1,49 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import styled from "styled-components";
+
+import Button from "./components/button/button";
+
+const AppContainer = styled.div`
+  background-color: #bbb9b9;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+`;
+
+const AppHeader = styled.header`
+  background-color: #222;
+  color: white;
+  height: 150px;
+  padding: 20px;
+`;
+
+const Title = styled.h1`
+  font-size: 1.5em;
+`;
+
+const Content = styled.section`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Paragraph = styled.p``;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <AppContainer>
+        <AppHeader>
+          <Title>Welcome to React</Title>
+        </AppHeader>
+        <Content>
+          <Paragraph>
+            Trello Clone Built with React and Styled Components
+          </Paragraph>
+          <Button>React Styled Components</Button>
+        </Content>
+      </AppContainer>
     );
   }
 }
