@@ -2,7 +2,7 @@ const LOAD_PROFILE = 'LOAD_PROFILE'
 const LOAD_PROFILE_SUCCEEDED = 'LOAD_PROFILE_SUCCEEDED';
 const LOAD_PROFILE_FAILED = 'LOAD_PROFILE_FAILED';
 
-const loadProfile = () => ({ type: LOAD_PROFILE })
+const loadProfile = (username) => ({ type: LOAD_PROFILE, username })
 
 const loadProfileSucceeded = (profile) => ({
     type: LOAD_PROFILE_SUCCEEDED,

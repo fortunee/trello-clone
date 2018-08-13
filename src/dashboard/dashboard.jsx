@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from "styled-components";
 
 import Button from "../components/button/button";
@@ -29,24 +29,6 @@ const Content = styled.section`
 `;
 
 const Paragraph = styled.p``;
-
-// export default class Dashboard extends Component {
-//   render() {
-//     return (
-//         <AppContainer>
-//             <AppHeader>
-//             <Title>Welcome to React</Title>
-//             </AppHeader>
-//             <Content>
-//             <Paragraph>
-//                 Trello Clone Built with React and Styled Components
-//             </Paragraph>
-//             <Button>React Styled Components</Button>
-//             </Content>
-//       </AppContainer>
-//     )
-//   }
-// }
 
 const Dashboard = ({ loadProfile, profile, isLoading, hasError }) => (
     <AppContainer>
