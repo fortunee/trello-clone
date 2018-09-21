@@ -1,49 +1,16 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import { Provider } from 'react-redux';
 
-import Button from "./components/button/button";
+import Dashboard from "./dashboard/dashboard-container";
 
-const AppContainer = styled.div`
-  background-color: #bbb9b9;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  text-align: center;
-`;
-
-const AppHeader = styled.header`
-  background-color: #222;
-  color: white;
-  height: 150px;
-  padding: 20px;
-`;
-
-const Title = styled.h1`
-  font-size: 1.5em;
-`;
-
-const Content = styled.section`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-`;
-
-const Paragraph = styled.p``;
+import store from './root/store';
 
 class App extends Component {
   render() {
     return (
-      <AppContainer>
-        <AppHeader>
-          <Title>Welcome to React</Title>
-        </AppHeader>
-        <Content>
-          <Paragraph>
-            Trello Clone Built with React and Styled Components
-          </Paragraph>
-          <Button>React Styled Components</Button>
-        </Content>
-      </AppContainer>
+      <Provider store={store}>
+        <Dashboard />
+      </Provider>
     );
   }
 }
